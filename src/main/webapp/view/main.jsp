@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>天翼深圳通管理平台</title>
+<title>小鱼儿管理平台</title>
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/easyui/themes/default/easyui.css">
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/easyui/themes/icon.css">
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/easyui/jquery-1.8.0.min.js"></script>
@@ -40,7 +40,7 @@ $(function(){
 <body class="easyui-layout">
 
 <div data-options="region:'north'" style="height:50px;overflow:hidden;">
-  <h1>天翼深圳通管理平台</h1>
+  <h1>小鱼儿管理平台</h1>
   <div id="login_user_info">欢迎你：${currentUser.name}. <a href="<%=request.getContextPath() %>/app/logout">退出</a></div>
 </div>
 
@@ -49,7 +49,9 @@ $(function(){
 	<ul id="help_tree" class="easyui-tree"></ul>
 </div>
 <div data-options="region:'center'" title="主窗口" style=" padding:10px; text-align:left;">
-  <div id="show_win"></div>
+  <div id="show_win">
+      <jsp:include page="report/bar.jsp"/>
+  </div>
 </div>
 
 <script>
