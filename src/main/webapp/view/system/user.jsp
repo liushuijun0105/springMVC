@@ -65,7 +65,7 @@ var UrlConfig = {
 	SysUserUpdate: '<%=request.getContextPath() %>/app/sys/user/update',
 	SysUserDelete: '<%=request.getContextPath() %>/app/sys/user/delete',
 	SysUserResetPassword: '<%=request.getContextPath() %>/app/sys/user/resetPassword',
-	
+    //下拉框
 	SysRoleList: '<%=request.getContextPath() %>/app/sys/role/listNoRoot',
 	SysGroupList: '<%=request.getContextPath() %>/app/sys/group/ownGroups'
 };
@@ -87,8 +87,8 @@ $(function(){
 			{title:'角色', field:'roleName', width:100}
 		]]
 	});
-	
-	$('#user_save_dialog').dialog({
+
+    $('#user_save_dialog').dialog({
 		title: '用户信息',
 	    width: 500,
 	    height: 300,

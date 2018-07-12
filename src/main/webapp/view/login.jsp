@@ -5,14 +5,14 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>请登录</title>
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/easyui/themes/bootstrap/easyui.css">
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/easyui/themes/icon.css">
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/easyui/jquery-1.8.0.min.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript" src="<%=request.getContextPath() %>/resources/easyui/locale/easyui-lang-zh_CN.js"></script>
 <link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/style/main.css">
 </head>
-<body>
+<body background="<%=request.getContextPath() %>/resources/images/login-background.jpg">
 
 <div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
 		buttons="#dlg-buttons" modal="true" title="请登录" closable="false">

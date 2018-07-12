@@ -42,7 +42,7 @@ public class AccountController {
 		SysUser user = (SysUser) session.getAttribute(App.USER_SESSION_KEY);
 		
 		if (user == null) {			
-			return "login";
+			return "login1";
 		}
 		
 		String roleId = user.getRoleId();
