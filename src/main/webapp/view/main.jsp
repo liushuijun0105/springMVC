@@ -1,15 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
+<jsp:include page="common/common.jsp"/>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>小鱼儿管理平台</title>
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/easyui/themes/default/easyui.css">
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/easyui/themes/icon.css">
-<script type="text/javascript" src="<%=request.getContextPath() %>/resources/easyui/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath() %>/resources/easyui/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="<%=request.getContextPath() %>/resources/easyui/locale/easyui-lang-zh_CN.js"></script>
-<link rel="stylesheet" type="text/css" href="<%=request.getContextPath() %>/resources/style/main.css">
+    <title>小鱼儿管理平台</title>
 <script type="text/javascript">
 var treeData = <%=request.getAttribute("treeJson") %>;
 
@@ -50,7 +45,7 @@ $(function(){
 </div>
 <div data-options="region:'center'" title="主窗口" style=" padding:10px; text-align:left;">
   <div id="show_win">
-      <jsp:include page="report/bar.jsp"/>
+      <%--<jsp:include page="report/echart.jsp"/>--%>
   </div>
 </div>
 
