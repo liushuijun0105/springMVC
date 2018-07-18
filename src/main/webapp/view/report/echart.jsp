@@ -6,18 +6,72 @@
 <body style="height: 100%; margin: 0">
    <div id="bar-container" style="height: 60%;width: 98%"></div>
    <div id="line-container" style="height: 60%;width: 98%"></div>
+   <div id="pie-container" style="height: 60%;width: 95%"></div>
 
    <script type="text/javascript" src="<%=request.getContextPath() %>/resources/echarts/echarts.js"></script>
    <script type="text/javascript" src="<%=request.getContextPath() %>/resources/echarts/echarts-gl.js"></script>
+   <%--<script type="text/javascript" src="<%=request.getContextPath() %>/resources/echarts/macarons.js"></script>--%>
+   <script type="text/javascript" src="<%=request.getContextPath() %>/resources/echarts/shine.js"></script>
    <script type="text/javascript">
        $(function(){
             bar();
             line();
+            pie();
        });
+       //饼状图
+       function pie() {
+           var dom = document.getElementById("pie-container");
+           var myChart = echarts.init(dom,"shine");
+           var app = {};
+           var option = null;
+           option = {
+               title : {
+                   text: '某站点用户访问来源',
+                   subtext: '纯属虚构',
+                   x:'center'
+               },
+               tooltip : {
+                   trigger: 'item',
+                   formatter: "{a} <br/>{b} : {c} ({d}%)"
+               },
+               legend: {
+                   orient: 'vertical',
+                   left: 'left',
+                   data: ['直接访问','邮件营销','联盟广告','视频广告','搜索引擎']
+               },
+               series : [
+                   {
+                       name: '访问来源',
+                       type: 'pie',
+                       radius : '55%',
+                       center: ['50%', '60%'],
+                       data:[
+                           {value:335, name:'直接访问'},
+                           {value:310, name:'邮件营销'},
+                           {value:234, name:'联盟广告'},
+                           {value:135, name:'视频广告'},
+                           {value:1548, name:'搜索引擎'}
+                       ],
+                       itemStyle: {
+                           emphasis: {
+                               shadowBlur: 10,
+                               shadowOffsetX: 0,
+                               shadowColor: 'rgba(0, 0, 0, 0.5)'
+                           }
+                       }
+                   }
+               ]
+           };
+           ;
+           if (option && typeof option === "object") {
+               myChart.setOption(option, true);
+           }
+           
+       }
        //折线图
        function line() {
            var dom = document.getElementById("line-container");
-           var myChart = echarts.init(dom);
+           var myChart = echarts.init(dom,"shine");
            var app = {};
            var option = null;
            option = {
@@ -53,31 +107,26 @@
                    {
                        name:'邮件营销',
                        type:'line',
-                       stack: '总量',
                        data:[120, 132, 101, 134, 90, 230, 210]
                    },
                    {
                        name:'联盟广告',
                        type:'line',
-                       stack: '总量',
-                       data:[220, 182, 191, 234, 290, 330, 310]
+                       data:[220, 182, 191, 234, 290, 730, 310]
                    },
                    {
                        name:'视频广告',
                        type:'line',
-                       stack: '总量',
-                       data:[150, 232, 201, 154, 190, 330, 410]
+                       data:[150, 232, 401, 554, 690, 530, 410]
                    },
                    {
                        name:'直接访问',
                        type:'line',
-                       stack: '总量',
-                       data:[320, 332, 301, 334, 390, 330, 320]
+                       data:[320, 532, 701, 994, 1390, 830, 820]
                    },
                    {
                        name:'搜索引擎',
                        type:'line',
-                       stack: '总量',
                        data:[820, 932, 901, 934, 1290, 1330, 1320]
                    }
                ]
@@ -90,7 +139,7 @@
        //柱状图
        function bar() {
            var dom = document.getElementById("bar-container");
-           var myChart = echarts.init(dom);
+           var myChart = echarts.init(dom,"shine");
            var app = {};
            var option = null;
            option = {
