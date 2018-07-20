@@ -7,6 +7,6 @@ package org.buzheng.demo.esm.web.util;
  * @Description
  */
 public interface MessageInterface {
-     String getValue();
+     String getMessage();
      int getCode();
 }

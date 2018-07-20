@@ -77,10 +77,10 @@ public class AccountController {
 				session.setAttribute(App.USER_SESSION_KEY, user);
 				return new Result();
 			} else {
-				return new Result("用户名密码不匹配");
+				return new Result(ResponseMessage.ResponseUserPass.getMessage());
 			}
 		} catch (Exception e){
-			return new Result(ResponseMessage.ResponseError.getValue());
+			return new Result(ResponseMessage.ResponseError.getMessage());
 		}
 		
 	}
