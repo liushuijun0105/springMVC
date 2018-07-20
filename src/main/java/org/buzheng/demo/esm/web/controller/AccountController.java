@@ -12,6 +12,7 @@ import org.buzheng.demo.esm.service.SysMenuService;
 import org.buzheng.demo.esm.service.SysRoleMenuService;
 import org.buzheng.demo.esm.service.SysUserService;
 import org.buzheng.demo.esm.web.util.EasyuiTreeNode;
+import org.buzheng.demo.esm.web.util.ResponseMessage;
 import org.buzheng.demo.esm.web.util.Result;
 import org.buzheng.demo.esm.web.util.WebFrontHelper;
 import org.slf4j.Logger;
@@ -68,16 +69,18 @@ public class AccountController {
 			@RequestParam(value = "username", required=true) String username,
 			@RequestParam(value = "password", required=true) String password,
 			HttpSession session) {
+		try{
+			SysUser user = this.sysUserService.loadUserByUsernameAndPassword(username, password);
 
-
-		SysUser user = this.sysUserService.loadUserByUsernameAndPassword(username, password);
-		
-		if (user != null) {
-			logger.info("登陆成功：{}", user);
-			session.setAttribute(App.USER_SESSION_KEY, user);
-			return new Result();
-		} else {
-			return new Result("用户名密码不匹配");
+			if (user != null) {
+				logger.info("登陆成功：{}", user);
+				session.setAttribute(App.USER_SESSION_KEY, user);
+				return new Result();
+			} else {
+				return new Result("用户名密码不匹配");
+			}
+		} catch (Exception e){
+			return new Result(ResponseMessage.ResponseError.getValue());
 		}
 		
 	}
