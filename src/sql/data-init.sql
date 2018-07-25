@@ -16,7 +16,7 @@ INSERT INTO `sys_menu` (`MENU_ID`, `MENU_NAME`, `PARENT_MENU_ID`, `MENU_URL`, `U
 INSERT INTO `sys_menu` (`MENU_ID`, `MENU_NAME`, `PARENT_MENU_ID`, `MENU_URL`, `UPDATE_TIME`) VALUES (5, '角色管理', 1, '/app/page/sysrole', '2018-7-6 15:47:22');
 INSERT INTO `sys_menu` (`MENU_ID`, `MENU_NAME`, `PARENT_MENU_ID`, `MENU_URL`, `UPDATE_TIME`) VALUES (6, '用户管理', 1, '/app/page/sysuser', '2018-7-6 15:47:28');
 INSERT INTO `sys_menu` (`MENU_ID`, `MENU_NAME`, `PARENT_MENU_ID`, `MENU_URL`, `UPDATE_TIME`) VALUES (10, '统计报表', NULL, '', '2018-7-6 15:47:39');
-INSERT INTO `sys_menu` (`MENU_ID`, `MENU_NAME`, `PARENT_MENU_ID`, `MENU_URL`, `UPDATE_TIME`) VALUES (11, '食品统计', 10, 'report/food', '2018-7-6 15:47:55');
+INSERT INTO `sys_menu` (`MENU_ID`, `MENU_NAME`, `PARENT_MENU_ID`, `MENU_URL`, `UPDATE_TIME`) VALUES (11, '食品统计', 10, 'report/echart', '2018-7-6 15:47:55');
 
 INSERT INTO `sys_role` (`ROLE_ID`, `ROLE_NAME`, `REMARK`, `UPDATE_TIME`) VALUES (1, '超级管理员', '具有全部权限', '2018-7-6 15:48:10');
 

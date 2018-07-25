@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-    <title>小鱼儿管理平台</title>
+    <title>小鱼儿&管理平台</title>
 <script type="text/javascript">
 var treeData = <%=request.getAttribute("treeJson") %>;
 
@@ -35,7 +35,7 @@ $(function(){
 <body class="easyui-layout">
 
 <div data-options="region:'north'" style="height:50px;overflow:hidden;">
-  <h1 style="font-size:19px;">&nbsp;&nbsp;小鱼儿管理平台</h1>
+  <h1 style="font-size:19px;">&nbsp;&nbsp;小鱼儿&管理平台</h1>
   <div id="login_user_info">欢迎你：${currentUser.name}. <a href="<%=request.getContextPath() %>/app/logout">退出</a></div>
 </div>
 
