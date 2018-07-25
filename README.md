@@ -1,3 +1,3 @@
-# springMVC-easyUI-mysql
+# springMVC-easyUI-mysql-Echarts
 1、项目包括基本的系统的增删改查
 2、包括SQL脚本，下载即可运行，后期会慢慢优化补充完善...

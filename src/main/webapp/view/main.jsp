@@ -34,16 +34,16 @@ $(function(){
 </head>
 <body class="easyui-layout">
 
-<div data-options="region:'north'" style="height:50px;overflow:hidden;">
-  <h1 style="font-size:19px;">&nbsp;&nbsp;小鱼儿&管理平台</h1>
-  <div id="login_user_info">欢迎你：${currentUser.name}. <a href="<%=request.getContextPath() %>/app/logout">退出</a></div>
+<div data-options="region:'north'" style="height:50px;overflow:hidden;background-color:#436EEE;color: #FFFFFF;">
+  <h1 style="font-size:19px;width: 200px;">&nbsp;&nbsp;小鱼儿&管理平台</h1>
+  <div id="login_user_info" style="width:180px; height:20px;top: 10px;">欢迎你：${currentUser.name}. <a href="<%=request.getContextPath() %>/app/logout" style="color: red;text-decoration:none;">退出</a></div>
 </div>
 
 
 <div data-options="region:'west',split:true,title:'导航窗口',iconCls:'icon-help'" style="width:248px;padding:5px; text-align:left;">
 	<ul id="help_tree" class="easyui-tree"></ul>
 </div>
-<div data-options="region:'center'" title="主窗口" style=" padding:10px; text-align:left;">
+<div data-options="region:'center'"  style=" padding:10px; text-align:left;">
   <div id="show_win">
       <%--<jsp:include page="report/echart.jsp"/>--%>
   </div>
