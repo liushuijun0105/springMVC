@@ -3,10 +3,12 @@
 <head>
     <meta charset="utf-8">
 </head>
-<body style="height: 100%; margin: 0">
-   <div id="bar-container" style="height: 60%;width: 98%"></div>
-   <div id="line-container" style="height: 60%;width: 98%"></div>
-   <div id="pie-container" style="height: 60%;width: 95%"></div>
+<body style="margin: 0">
+   <div style="height: 650px;margin: 0;width: 100%; overflow:scroll;" >
+      <div id="bar-container" style="height: 60%;width: 98%"></div>
+      <div id="line-container" style="height: 60%;width: 98%"></div>
+      <div id="pie-container" style="height: 60%;width: 95%"></div>
+   </div>
 
    <script type="text/javascript" src="<%=request.getContextPath() %>/resources/echarts/echarts.js"></script>
    <script type="text/javascript" src="<%=request.getContextPath() %>/resources/echarts/echarts-gl.js"></script>
@@ -66,7 +68,7 @@
            if (option && typeof option === "object") {
                myChart.setOption(option, true);
            }
-           
+
        }
        //折线图
        function line() {
